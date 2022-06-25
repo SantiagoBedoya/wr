@@ -4,7 +4,7 @@
 
 ## How to install
 
-`go install github.com/SantiagoBedoya/wr-cli`
+`go install github.com/SantiagoBedoya/wr`
 
 ## How to use
 
