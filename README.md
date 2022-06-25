@@ -4,17 +4,7 @@
 
 ## How to install
 
-### Mac
-
-`brew install wr`
-
-### Linux
-
-`apt-get wr`
-
-### Windows
-
-`choco install wr`
+`go install github.com/SantiagoBedoya/wr-cli`
 
 ## How to use
 
