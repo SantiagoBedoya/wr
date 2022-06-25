@@ -1,4 +1,4 @@
-module github.com/SantiagoBedoya/wr-cli
+module github.com/SantiagoBedoya/wr
 
 go 1.18
 

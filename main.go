@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/SantiagoBedoya/wr-cli/cmd"
+import "github.com/SantiagoBedoya/wr/cmd"
 
 func main() {
 	cmd.Execute()

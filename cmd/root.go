@@ -25,13 +25,13 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/SantiagoBedoya/wr-cli/internal/scraper"
+	"github.com/SantiagoBedoya/wr/internal/scraper"
 	"github.com/spf13/cobra"
 )
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "wr-cli <word>",
+	Use:   "wr <word>",
 	Short: "WordReference Command Line Interface",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
