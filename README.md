@@ -4,7 +4,7 @@
 
 ## How to install
 
-`go install github.com/SantiagoBedoya/wr`
+`go install github.com/SantiagoBedoya/wr@latest`
 
 ## How to use
 
