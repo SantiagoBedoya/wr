@@ -24,19 +24,24 @@ func WrTranslate(word, from, to string) {
 	})
 
 	c.OnScraped(func(r *colly.Response) {
-		fmt.Println("Finished!")
+		if len(results) == 0 {
+			fmt.Println("Finished! => No results")
+			return
+		}
 		keys := make([]string, 0, len(results))
 		for k := range results {
 			keys = append(keys, k)
 		}
-		fmt.Println(strings.Join(keys, ", "))
+		fmt.Printf("Finished! => %s\n", strings.Join(keys, ", "))
 	})
 	completeURL := fmt.Sprintf("%s/%s%s/%s", url, from, to, word)
 	c.Visit(completeURL)
 }
 
 func sanitize(text string) string {
-	var words = []string{"nm", "+", "adj", "prnl", "loc", "adv", "⇒", "vtr", "verb", "prep", "mf", "nf", "propio", " n", " f", " vi", " v", " expr"}
+	var words = []string{" grupo", " nom", " nm", " +", " adj", " prnl", " loc", " adv", "⇒", " vtr", " verb",
+		" prep", " mf", " nf", " propio", " n", " f", " vi", " v", " expr",
+		" conj", " pl", " [sb]", " [sth]"}
 	for _, v := range words {
 		text = strings.ReplaceAll(text, v, "")
 	}
