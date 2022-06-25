@@ -17,3 +17,5 @@
 `choco install wr`
 
 ## How to use
+
+![WordReferenceCLI](https://github.com/SantiagoBedoya/wr-cli/blob/master/docs/wr.png)
