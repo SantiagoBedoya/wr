@@ -32,7 +32,8 @@ func WrTranslate(word, from, to string) {
 		for k := range results {
 			keys = append(keys, k)
 		}
-		fmt.Printf("Finished! => %s\n", strings.Join(keys, ", "))
+		result := buildResultString(keys)
+		fmt.Printf("Finished! => %s\n", result)
 	})
 	completeURL := fmt.Sprintf("%s/%s%s/%s", url, from, to, word)
 	c.Visit(completeURL)
@@ -47,4 +48,18 @@ func sanitize(text string) string {
 	}
 	text = strings.TrimSpace(text)
 	return text
+}
+
+func buildResultString(parts []string) string {
+	cleanParts := make([]string, 0)
+	for _, part := range parts {
+		p := strings.Split(strings.TrimSpace(part), ",")
+		for _, t := range p {
+			clean := strings.TrimSpace(t)
+			if clean != "" {
+				cleanParts = append(cleanParts, clean)
+			}
+		}
+	}
+	return strings.Join(cleanParts, ",")
 }
